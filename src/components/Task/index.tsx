@@ -1,26 +1,22 @@
-import { useState } from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
 import { styles } from './styles'
 import { Checkbox } from '../Checkbox'
 import { Ionicons } from '@expo/vector-icons'
+import { TaskType } from '../../contexts/tasks'
 
 interface TaskProps {
-  content: string
+  item: TaskType
   handleTaskRemove: () => void
+  handleCheck: () => void
 }
 
-export function Task({ content, handleTaskRemove }: TaskProps) {
-  const [isChecked, setIsChecked] = useState(false)
-
+export function Task({ item, handleCheck, handleTaskRemove }: TaskProps) {
   return (
-    <TouchableOpacity
-      style={styles.container}
-      onPress={() => setIsChecked(!isChecked)}
-    >
-      <Checkbox checked={isChecked} onCheck={setIsChecked} />
+    <TouchableOpacity style={styles.container} onPress={handleCheck}>
+      <Checkbox checked={item.isChecked} onCheck={handleCheck} />
       <View style={styles.content}>
-        <Text style={[styles.text, isChecked && styles.textChecked]}>
-          {content}
+        <Text style={[styles.text, item.isChecked && styles.textChecked]}>
+          {item.task}
         </Text>
       </View>
       <TouchableOpacity onPress={handleTaskRemove}>

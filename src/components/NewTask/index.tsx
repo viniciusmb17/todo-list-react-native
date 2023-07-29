@@ -18,7 +18,10 @@ export function NewTask() {
     }
 
     const id = uuid.v4().toString()
-    setTasks((prevState) => [...prevState, { id, task: field }])
+    setTasks((prevState) => [
+      ...prevState,
+      { id, task: field, isChecked: false },
+    ])
     setField('')
   }
 

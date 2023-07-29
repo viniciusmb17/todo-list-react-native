@@ -21,14 +21,20 @@ export function Tasks() {
     ])
   }
 
+  function handleCheckTask(index: number) {
+    tasks[index].isChecked = !tasks[index].isChecked
+    setTasks((prevState) => [...prevState])
+  }
+
   return (
     <FlatList
       style={styles.container}
       data={tasks}
-      renderItem={({ item }) => (
+      renderItem={({ item, index }) => (
         <Task
-          content={item.task}
+          item={item}
           handleTaskRemove={() => handleTaskRemove(item.id)}
+          handleCheck={() => handleCheckTask(index)}
         />
       )}
       keyExtractor={(item) => item.id}

@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
     marginBottom: 8,
   },
   content: {
+    width: '100%',
     paddingLeft: 24,
     paddingRight: 32,
     flexShrink: 1,

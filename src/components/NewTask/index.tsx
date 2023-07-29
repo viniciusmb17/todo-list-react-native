@@ -1,7 +1,8 @@
-import { Text, TextInput, TouchableOpacity, View, Alert } from 'react-native'
+import { TextInput, TouchableOpacity, View, Alert } from 'react-native'
 import { styles } from './styles'
 import { useState } from 'react'
 import { useTaskContext } from '../../hooks/tasks'
+import { Ionicons } from '@expo/vector-icons'
 import uuid from 'react-native-uuid'
 
 export function NewTask() {
@@ -39,8 +40,15 @@ export function NewTask() {
         value={field}
         onChangeText={setField}
       />
-      <TouchableOpacity style={styles.createButton} onPress={handleNewTask}>
-        <Text style={styles.createButtonText}>+</Text>
+      <TouchableOpacity onPress={handleNewTask}>
+        <View>
+          <Ionicons
+            style={styles.createButton}
+            name="add-circle-outline"
+            size={18}
+            color={'#F2F2F2'}
+          />
+        </View>
       </TouchableOpacity>
     </View>
   )

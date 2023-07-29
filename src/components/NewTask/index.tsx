@@ -9,8 +9,8 @@ export function NewTask() {
         placeholder="Adicione uma nova tarefa"
         placeholderTextColor={'#808080'}
       />
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>+</Text>
+      <TouchableOpacity style={styles.createButton}>
+        <Text style={styles.createButtonText}>+</Text>
       </TouchableOpacity>
     </View>
   )

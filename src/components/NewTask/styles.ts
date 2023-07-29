@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 54.08,
+    marginTop: -34,
   },
   input: {
     gap: 8,
@@ -21,7 +22,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: '#F2F2F2',
   },
-  button: {
+  createButton: {
     padding: 18,
     justifyContent: 'center',
     alignItems: 'center',
@@ -29,7 +30,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#1E6F9F',
     borderRadius: 6,
   },
-  buttonText: {
+  createButtonText: {
     color: '#F2F2F2',
   },
 })

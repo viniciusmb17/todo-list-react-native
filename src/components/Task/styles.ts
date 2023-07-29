@@ -34,4 +34,8 @@ export const styles = StyleSheet.create({
     flexWrap: 'wrap',
     lineHeight: 19.6,
   },
+  textChecked: {
+    color: '#808080',
+    textDecorationLine: 'line-through',
+  },
 })

@@ -1,7 +1,6 @@
 import { Text, View, Image } from 'react-native'
 import { styles } from './styles'
 
-// TODO: EmptyTasks component
 export function EmptyTasks() {
   return (
     <View style={styles.container}>

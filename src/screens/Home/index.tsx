@@ -1,8 +1,6 @@
 import { View } from 'react-native'
-import { Header } from '../../components/Header'
-import { NewTask } from '../../components/NewTask'
+import { Header, NewTask, Infos, Tasks } from '../../components'
 import { styles } from './styles'
-import { Infos } from '../../components/Infos'
 
 export function Home() {
   return (
@@ -10,6 +8,7 @@ export function Home() {
       <Header />
       <NewTask />
       <Infos />
+      <Tasks />
     </View>
   )
 }

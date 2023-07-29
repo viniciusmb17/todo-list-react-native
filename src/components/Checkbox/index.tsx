@@ -10,7 +10,7 @@ export function Checkbox() {
       style={[styles.checkboxBase, checked && styles.checkboxChecked]}
       onPress={() => setChecked(!checked)}
     >
-      {checked && <Ionicons name="md-checkmark" size={18} color={'#F2F2F2'} />}
+      {checked && <Ionicons name="md-checkmark" size={13} color={'#F2F2F2'} />}
     </Pressable>
   )
 }

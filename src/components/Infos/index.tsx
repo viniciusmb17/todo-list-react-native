@@ -7,13 +7,13 @@ export function Infos() {
       <View style={styles.infoContainer}>
         <Text style={styles.createdInfoText}>Criadas</Text>
         <View style={styles.counter}>
-          <Text style={styles.counterText}>0</Text>
+          <Text style={styles.counterText}>{}</Text>
         </View>
       </View>
       <View style={styles.infoContainer}>
         <Text style={styles.completedInfoText}>Concluídas</Text>
         <View style={styles.counter}>
-          <Text style={styles.counterText}>0</Text>
+          <Text style={styles.counterText}>{}</Text>
         </View>
       </View>
     </View>

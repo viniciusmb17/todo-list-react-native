@@ -4,18 +4,19 @@ import { styles } from './styles'
 import { Checkbox } from '../Checkbox'
 import { Ionicons } from '@expo/vector-icons'
 
-export function Task() {
+interface TaskProps {
+  content: string
+}
+
+export function Task({ content }: TaskProps) {
   const [isChecked, setIsChecked] = useState(false)
 
   return (
     <View style={styles.container}>
-      <View>
-        <Checkbox checked={isChecked} onCheck={setIsChecked} />
-      </View>
+      <Checkbox checked={isChecked} onCheck={setIsChecked} />
       <View style={styles.content}>
         <Text style={[styles.text, isChecked && styles.textChecked]}>
-          Integer urna interdum massa libero auctor neque turpis turpis semper.
-          Duis vel sed fames integer.
+          {content}
         </Text>
       </View>
       <TouchableOpacity>

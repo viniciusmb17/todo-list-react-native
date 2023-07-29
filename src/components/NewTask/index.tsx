@@ -2,7 +2,7 @@ import { Text, TextInput, TouchableOpacity, View, Alert } from 'react-native'
 import { styles } from './styles'
 import { useState } from 'react'
 import { useTaskContext } from '../../hooks/tasks'
-import { v4 as uuid } from 'uuid'
+import uuid from 'react-native-uuid'
 
 export function NewTask() {
   const { setTasks } = useTaskContext()
@@ -17,7 +17,7 @@ export function NewTask() {
       )
     }
 
-    const id = uuid()
+    const id = uuid.v4().toString()
     setTasks((prevState) => [...prevState, { id, task: field }])
     setField('')
   }

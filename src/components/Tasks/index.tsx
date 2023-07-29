@@ -1,4 +1,4 @@
-import { FlatList } from 'react-native'
+import { Alert, FlatList } from 'react-native'
 import { styles } from './styles'
 import { Task } from '../Task'
 import { EmptyTasks } from '../EmptyTasks'
@@ -8,7 +8,17 @@ export function Tasks() {
   const { tasks, setTasks } = useTaskContext()
 
   function handleTaskRemove(id: string) {
-    setTasks((prevState) => prevState.filter((item) => item.id !== id))
+    Alert.alert('Remover', 'Remover task selecionada?', [
+      {
+        text: 'Sim',
+        onPress: () =>
+          setTasks((prevState) => prevState.filter((item) => item.id !== id)),
+      },
+      {
+        text: 'Não',
+        style: 'cancel',
+      },
+    ])
   }
 
   return (

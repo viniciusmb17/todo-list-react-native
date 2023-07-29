@@ -2,30 +2,11 @@ import { FlatList } from 'react-native'
 import { styles } from './styles'
 import { Task } from '../Task'
 import { EmptyTasks } from '../EmptyTasks'
-import { useState } from 'react'
-
-interface initialStateType {
-  id: string
-  task: string
-}
-
-const initialState: initialStateType[] | [] = [
-  {
-    id: '1',
-    task: `Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.`,
-  },
-  {
-    id: '2',
-    task: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore fugiat beatae deleniti ab in ex repellat accusantium quaerat a nisi officiis ullam, ducimus, possimus quo repudiandae magni aliquid! Deleniti, commodi.`,
-  },
-  {
-    id: '3',
-    task: `Labore fugiat beatae deleniti ab in ex repellat accusantium quaerat a nisi officiis ullam, ducimus, possimus quo repudiandae magni aliquid! Deleniti, commodi`,
-  },
-]
+import { useTaskContext } from '../../hooks/tasks'
 
 export function Tasks() {
-  const [tasks, setTasks] = useState(initialState)
+  const { tasks, setTasks } = useTaskContext()
+
   function handleTaskRemove(id: string) {
     setTasks((prevState) => prevState.filter((item) => item.id !== id))
   }

@@ -15,5 +15,6 @@ export const styles = StyleSheet.create({
     color: '#808080',
     fontSize: 14,
     lineHeight: 19.6,
+    fontFamily: 'Inter_400Regular',
   },
 })

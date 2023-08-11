@@ -15,11 +15,13 @@ export const styles = StyleSheet.create({
     color: '#4EA8DE',
     fontWeight: 'bold',
     fontSize: 14,
+    fontFamily: 'Inter_700Bold',
   },
   completedInfoText: {
     color: '#8284FA',
     fontWeight: 'bold',
     fontSize: 14,
+    fontFamily: 'Inter_700Bold',
   },
   counter: {
     backgroundColor: '#333333',
@@ -31,5 +33,6 @@ export const styles = StyleSheet.create({
   },
   counterText: {
     color: '#D9D9D9',
+    fontFamily: 'Inter_400Regular',
   },
 })

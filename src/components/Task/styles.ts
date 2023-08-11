@@ -31,10 +31,12 @@ export const styles = StyleSheet.create({
     maxWidth: 354,
     color: '#F2F2F2',
     lineHeight: 19.6,
+    fontFamily: 'Inter_400Regular',
   },
   textChecked: {
     color: '#808080',
     textDecorationLine: 'line-through',
+    fontFamily: 'Inter_400Regular',
   },
   // trashContainer: {
   //   width: 100,
